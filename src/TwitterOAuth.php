@@ -95,6 +95,14 @@ class TwitterOAuth extends Config
     }
 
     /**
+     */
+    public function useCurrentApi(): void
+    {
+        $this->apiVersion = 1.1;
+        $this->urlPattern = '%s/%s/%s.json';
+    }
+
+    /**
      * @return string|null
      */
     public function getLastApiPath(): ?string
